@@ -1,12 +1,10 @@
-
 provider "aws" {
   region     = "ca-central-1"
-  profile = "default"
 }
 
 ##This will store in S3 bucket
-terraform {
-  backend "s3" {
+  terraform {
+    backend "s3" {
     bucket = "bucketforterrastate"
     key    = "terraform.tfstate"
     region = "ca-central-1"
